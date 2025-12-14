@@ -85,3 +85,122 @@ body::before {
     font-weight: 400;
     color: #c0c0c5;
 }
+
+.insult {
+    color: #ff66aa; /* Rosa per l'insulto */
+    text-shadow: 0 0 10px #ff66aa;
+    /* Animazione di glitch subtile */
+    animation: glitch 2s infinite linear alternate-reverse; 
+}
+
+.wish-card {
+    background: var(--color-glass-dark);
+    border-radius: 12px;
+    padding: 25px;
+    margin-top: 30px;
+    border: 2px solid var(--color-secondary-accent);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    transition: all 0.4s ease-out;
+}
+
+.wish-card:hover {
+    transform: scale(1.02) rotateZ(-0.5deg);
+    box-shadow: 0 0 30px var(--color-primary-accent), 0 0 5px var(--color-secondary-accent);
+}
+
+.wish-text {
+    color: var(--color-primary-accent);
+    font-size: 4em;
+    font-family: 'Major Mono Display', monospace;
+    text-shadow: 0 0 20px var(--color-primary-accent);
+}
+
+/* BOTTONE CTA - Pulsante al Neon */
+.cta-button {
+    background: var(--color-primary-accent);
+    color: var(--color-bg-deep);
+    border: none;
+    padding: 18px 35px;
+    font-size: 1.3em;
+    font-weight: 900;
+    border-radius: 50px; /* Pill shape */
+    cursor: pointer;
+    margin-top: 40px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 5px var(--color-primary-accent), 0 0 20px var(--color-primary-accent);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cta-button:hover {
+    background: var(--color-secondary-accent);
+    box-shadow: 0 0 10px var(--color-secondary-accent), 0 0 30px var(--color-secondary-accent);
+    transform: translateY(-3px) scale(1.02);
+}
+
+.cta-button:active {
+    transform: translateY(0);
+}
+
+.cta-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* UTILITY & ANIMAZIONI - QUESTE ERANO MANCANTI E CAUSAVANO IL PROBLEMA */
+/* --------------------------------------------------------------------- */
+
+.hidden {
+    /* Nasconde l'elemento e lo rimuove dal flusso di layout */
+    display: none; 
+    opacity: 0;
+    /* Rimuoviamo la transizione qui, la gestiamo con .fade-in */
+}
+
+.visible {
+    /* Riporta l'elemento alla visualizzazione normale (ad esempio come blocco) */
+    display: block; 
+    opacity: 1;
+}
+
+/* Animazione di entrata del container */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animazione Glitch sottile (per l'insulto) */
+@keyframes glitch {
+    0% { text-shadow: 1px 0 0 var(--color-secondary-accent), -1px 0 0 var(--color-primary-accent); }
+    25% { text-shadow: -1px 0 0 var(--color-secondary-accent), 1px 0 0 var(--color-primary-accent); }
+    50% { text-shadow: 1px -1px 0 var(--color-primary-accent), -1px 1px 0 var(--color-secondary-accent); }
+    75% { text-shadow: -1px 1px 0 var(--color-primary-accent), 1px -1px 0 var(--color-secondary-accent); }
+    100% { text-shadow: 0 0 0 var(--color-secondary-accent), 0 0 0 var(--color-primary-accent); }
+}
+
+.fade-in {
+    /* Applica l'animazione di dissolvenza con un leggero movimento */
+    animation: fadeIn 1.2s forwards;
+    display: block; /* Assicurati che l'elemento sia visibile durante l'animazione */
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* FOOTER */
+.footer {
+    margin-top: 50px;
+    font-size: 0.9em;
+    color: var(--color-secondary-accent);
+    opacity: 0.7;
+    font-family: 'Major Mono Display', monospace;
+}
