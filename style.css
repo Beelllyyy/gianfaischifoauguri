@@ -1,0 +1,139 @@
+/* Importazione dei font */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #1f2833 0%, #0b0c0e 100%); /* Sfondo scuro e moderno */
+    color: #c5c6c7; /* Testo grigio chiaro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #0d1216; /* Contenitore leggermente più chiaro */
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5), 0 0 15px #66fcf1; /* Ombra con accento neon */
+    padding: 40px;
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+    border: 1px solid #45a29e; /* Bordo sottile di accento */
+}
+
+/* HEADER */
+.header h1 {
+    font-family: 'Playfair Display', serif;
+    color: #66fcf1; /* Colore di accento neon */
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(102, 252, 241, 0.8);
+    transition: color 0.5s ease-in-out;
+}
+
+.header p {
+    color: #45a29e;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+/* MAIN CONTENT */
+.big-text {
+    font-size: 4em;
+    font-weight: 900;
+    margin: 10px 0;
+}
+
+.small-text {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #a8dadc;
+}
+
+.insult {
+    color: #ff6b6b; /* Rosso per l'insulto */
+    animation: pulse 1.5s infinite alternate;
+}
+
+.wish-card {
+    background-color: #1f2833;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid #66fcf1;
+    transition: transform 0.3s ease-out;
+}
+
+.wish-card:hover {
+    transform: scale(1.03);
+}
+
+.wish-text {
+    color: #66fcf1;
+    font-size: 3.5em;
+    text-shadow: 0 0 15px rgba(102, 252, 241, 0.7);
+}
+
+/* BOTTONE CTA */
+.cta-button {
+    background-color: #66fcf1;
+    color: #0b0c0e;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+    background-color: #45a29e;
+    color: white;
+    box-shadow: 0 0 20px #66fcf1;
+    transform: translateY(-2px);
+}
+
+.cta-button:active {
+    transform: translateY(0);
+}
+
+/* UTILITY CLASSES */
+.hidden {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.visible {
+    display: block;
+    opacity: 1;
+}
+
+/* ANIMAZIONI */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.05); }
+}
+
+/* Animazione di dissolvenza (usata da JS) */
+.fade-in {
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* FOOTER */
+.footer {
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #45a29e;
+}
