@@ -13,13 +13,13 @@ document.addEventListener('DOMContentLoaded', () => {
         switch (stage) {
             case 1:
                 // Fase 1: Sostituire il titolo e rivelare il sottotitolo
-                mainTitle.textContent = "ATTENZIONE: Messaggio Ufficiale";
+                mainTitle.textContent = "ATTENZIONE: Messaggio Ufficiale dalla Repubblica di Borgo Putano";
                 mainTitle.style.color = '#ff6b6b'; // Cambia colore per drammaticità
                 
                 subtitle.classList.remove('hidden');
                 subtitle.classList.add('visible', 'fade-in');
                 
-                revealButton.textContent = "Clicca per la Sentenza";
+                revealButton.textContent = "Clicca se sei frogio";
                 break;
 
             case 2:
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 insultSection.classList.remove('hidden');
                 insultSection.classList.add('visible', 'fade-in');
                 
-                revealButton.textContent = "Ok, ok, gli Auguri Veri...";
+                revealButton.textContent = "< frogio detecred >";
                 break;
 
             case 3:
@@ -41,10 +41,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 wishSection.classList.remove('hidden');
                 wishSection.classList.add('visible', 'fade-in');
 
-                mainTitle.textContent = "Buon Compleanno, Gian! (Ti vogliamo bene, dai...)";
+                mainTitle.textContent = "Buon Compleanno, Giannina! (MA COL CAZZO)";
                 mainTitle.style.color = '#66fcf1'; // Torna al colore originale
 
-                revealButton.textContent = "Finito. Festeggiamo?";
+                revealButton.textContent = "Finito. Mi sono anche rotto rcazzo";
                 revealButton.disabled = true; // Disabilita il pulsante
                 revealButton.style.opacity = '0.5'; // Rende il pulsante grigio
                 
